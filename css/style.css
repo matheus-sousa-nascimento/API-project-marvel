@@ -1,0 +1,229 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+/* corpo*/
+body{
+    background-color: #353535;
+}
+
+/* NavBar */
+#logo{
+    padding: 40px 0 40px;
+}
+ul li {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.navbar {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.nav-link {
+    transition: 0.5s ease;
+}
+.nav-link:hover {
+    color: #D32F2F;
+}
+.hamburguer {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+@media (max-width:844px){
+    .hamburguer{
+        display: block;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 2px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #353535;
+        text-align: center; 
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav-item {
+        margin: 8px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+/* Header */
+/* video */
+#video-adjust   {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#video {
+    margin: 100px;
+    height: 48vh;
+}
+
+/* title of header */
+.content {
+    
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    color: white;
+}
+.content .text-box{
+    position: relative;
+    max-width: 700px;
+}
+.content .text-box h2{
+    font-size: 2.3em;
+    line-height: 1.4em;
+    font-weight: 600;
+    line-height: 20px;
+}
+.content .text-box h2 span{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 900;
+    line-height: 1em;
+}
+.content .text-box p{
+    font-size: 1.4em;
+    word-spacing: 5px;
+    line-height: 25px;
+}
+
+/* Main */
+main{
+    background-image: radial-gradient(#D32F2F, black);
+}
+.bg{
+    border-radius: 15px;
+}
+h1{
+    font-weight: bold;
+}
+article{
+    text-align: justify;
+    font-size: 17px;
+}
+article u{
+    color: #D32F2F;
+}
+
+/* footer */
+footer{
+    color: white;
+    text-align: end; 
+   font-size: 5px;
+   width: 100%;
+}
+
+/* about page */
+
+.tx-cent{
+    font-weight: bold;
+    text-align: center;
+    
+    background-image: linear-gradient(to bottom, red ,#D32F2F  ,black);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+.subtitle{
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+/* Characters pg */
+.altitude{
+    height: 60vh;
+}
+
+.cont{
+    background-color: #171821;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3em 2em;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    right: 50%;
+    border-radius: 1em;
+}
+.input-container{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+}
+
+input{
+    padding: 1em 0.5em;
+    background-color: #3a3939;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    outline: none;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: #D32F2F;
+    color: white;
+    border-radius: 0.5em;
+}
+.display-container{
+    padding: 1em;
+}
+
